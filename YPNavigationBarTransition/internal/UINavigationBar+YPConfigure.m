@@ -72,12 +72,12 @@ SOFTWARE.
             UINavigationBarAppearance *appearance = [[self standardAppearance] copy];
             if (configure.translucent) {
                 [appearance configureWithDefaultBackground];
-                appearance.backgroundEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+                appearance.backgroundEffect = nil;
             } else {
                 [appearance configureWithOpaqueBackground];
             }
             appearance.backgroundColor = configure.backgroundColor;
-            appearance.backgroundImage = transpanrentImage;
+            appearance.backgroundImage = backgroundImage;
             if (!configure.shadowImage) {
                 appearance.shadowImage = nil;
                 appearance.shadowColor = nil;
